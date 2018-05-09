@@ -38,12 +38,4 @@ public class ContainerLoadedEvent extends BaseEvent {
         return data;
     }
 
-    @Override
-    public List<BaseMetaData> getMetaDataVersions() {
-        List<BaseMetaData> metaDataHistory = new ArrayList<>();
-        metaDataHistory.add(new ContainerLoadedMetadata_v1());
-        metaDataHistory.add(new ContainerLoadedMetadata_v2());
-        metaDataHistory.add(new ContainerLoadedMetadata_v3());
-        return metaDataHistory;
-    }
 }

@@ -1,4 +1,4 @@
-package test.testEevent;
+package com.company.testEevent;
 
 import com.company.BaseMetaData;
 
@@ -13,6 +13,11 @@ public class TestMetaData_v1 extends BaseMetaData {
     @Override
     public void upgrade(BaseMetaData baseMetaData) {
 
+    }
+
+    @Override
+    public Class<TestEvent> getEventClass() {
+        return TestEvent.class;
     }
 
     public String getName() {

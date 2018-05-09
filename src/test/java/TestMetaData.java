@@ -1,7 +1,5 @@
-package test;
-
+import com.company.testEevent.TestMetaData_v4;
 import org.junit.jupiter.api.Test;
-import test.testEevent.TestMetaData_v4;
 
 import java.util.Optional;
 

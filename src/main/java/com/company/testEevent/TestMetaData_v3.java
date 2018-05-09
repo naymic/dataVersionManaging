@@ -1,4 +1,4 @@
-package test.testEevent;
+package com.company.testEevent;
 
 import com.company.BaseMetaData;
 

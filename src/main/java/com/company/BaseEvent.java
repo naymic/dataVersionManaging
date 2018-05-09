@@ -58,7 +58,6 @@ public abstract class BaseEvent {
     private void addMetaDataVersion(){
         getMetaDataVersions()
                 .stream()
-                .sorted(Comparator.comparing(BaseMetaData::getMetaDataVersion))
                 .forEach(metaData1 -> this.metaDataVersions.add(metaData1.getMetaDataVersion()-1, metaData1));
     }
 
@@ -67,7 +66,9 @@ public abstract class BaseEvent {
      *
      * @return List<BaseMetaData>
      */
-    public abstract List<BaseMetaData> getMetaDataVersions();
+    public List<BaseMetaData> getMetaDataVersions(){
+        return MetaDataManager.getInstance().getEventMetaDataVersions(this.getClass());
+    }
 
     /**
      * Get last metaData version of an event

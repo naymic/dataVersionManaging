@@ -54,4 +54,10 @@ public class ContainerLoadedMetadata_v1 extends BaseMetaData {
 
     }
 
+    @Override
+    public Class<ContainerLoadedEvent> getEventClass() {
+        return ContainerLoadedEvent.class;
+    }
+
+
 }

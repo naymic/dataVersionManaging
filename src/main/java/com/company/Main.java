@@ -19,5 +19,6 @@ public class Main {
         System.out.println("Print out upgraded data:");
         System.out.println(gson.toJson(event.getMetaData()));
 
+        MetaDataManager.getInstance();
     }
 }

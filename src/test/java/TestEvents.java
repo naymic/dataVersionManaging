@@ -1,11 +1,9 @@
-package test;
-
-
 import com.google.gson.Gson;
 import org.junit.jupiter.api.Test;
-import test.testEevent.TestEvent;
-import test.testEevent.TestMetaData_v1;
-import test.testEevent.TestMetaData_v5;
+import com.company.testEevent.TestEvent;
+import com.company.testEevent.TestMetaData_v1;
+import com.company.testEevent.TestMetaData_v5;
+
 
 import java.util.Optional;
 
@@ -45,9 +43,6 @@ public class TestEvents {
 
         TestEvent event1 = new TestEvent(data_v3);
         TestMetaData_v5 eventData1 = (TestMetaData_v5) event1.getMetaData();
-
-        System.out.println(gson.toJson(eventData1));
-        System.out.println(data_v5);
         assertTrue(data_v5.equals(gson.toJson(eventData1)));
     }
 
