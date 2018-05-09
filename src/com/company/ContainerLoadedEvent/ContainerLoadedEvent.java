@@ -1,13 +1,16 @@
-package com.company;
+package com.company.ContainerLoadedEvent;
+
+import com.company.BaseEvent;
+import com.company.BaseMetaData;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 
-public class ContainerLoadedEvent extends BaseEvent{
+public class ContainerLoadedEvent extends BaseEvent {
 
-    ContainerLoadedEvent(String data){
+    public ContainerLoadedEvent(String data){
         super(data);
     }
 

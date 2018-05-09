@@ -1,8 +1,14 @@
 package com.company;
 
-import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
-
-public abstract class BaseMetaData implements MetaDataInterface{
+/**
+ * Abstract Base class for MetaData
+ *
+ * ATENTION:
+ * -A new metaData version extends the previos one
+ * -Every metaData version need to implement upgrade(MetaData metaData
+ * -New metaData versions need to be registered in it's event
+ */
+public abstract class BaseMetaData{
 
     private Integer version;
 
@@ -12,5 +18,13 @@ public abstract class BaseMetaData implements MetaDataInterface{
         this.version = version;
     }
 
+    public Integer getMetaDataVersion(){
+        int i;
+        Class<?> clazz = this.getClass();
+        for(i=0; clazz != BaseMetaData.class; i++){ clazz = clazz.getSuperclass(); }
+        return i;
+    }
+
+    public abstract void upgrade(BaseMetaData baseMetaData);
 
 }

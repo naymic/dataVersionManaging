@@ -1,8 +1,8 @@
 package com.company;
 
 
+import com.company.ContainerLoadedEvent.ContainerLoadedEvent;
 import com.google.gson.*;
-import java.util.Date;
 
 
 public class Main {
@@ -16,7 +16,7 @@ public class Main {
 
         event.getMetaData();
 
-        System.out.println("It worked");
+        System.out.println("Print out upgraded data:");
         System.out.println(gson.toJson(event.getMetaData()));
 
     }

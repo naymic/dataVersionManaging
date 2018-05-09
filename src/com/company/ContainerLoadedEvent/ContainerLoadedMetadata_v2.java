@@ -1,8 +1,10 @@
-package com.company;
+package com.company.ContainerLoadedEvent;
+
+import com.company.BaseMetaData;
 
 import java.util.Date;
 
-public class ContainerLoadedMetadata_v2 extends ContainerLoadedMetadata_v1 implements MetaDataInterface {
+public class ContainerLoadedMetadata_v2 extends ContainerLoadedMetadata_v1 {
 
     private Date loadingCompleteDate;
 
@@ -21,6 +23,5 @@ public class ContainerLoadedMetadata_v2 extends ContainerLoadedMetadata_v1 imple
         baseMetaData = baseMetaData1;
     }
 
-    @Override
-    public Integer getMetaDataVersion(){return 2;}
+
 }

@@ -1,6 +1,11 @@
-package com.company;
+package com.company.ContainerLoadedEvent;
 
-public class ContainerLoadedMetadata_v1 extends BaseMetaData implements MetaDataInterface{
+import com.company.BaseMetaData;
+
+/**
+ * Event created when a container finish to load
+ */
+public class ContainerLoadedMetadata_v1 extends BaseMetaData {
 
     private String id;
     private Double amount;
@@ -39,13 +44,14 @@ public class ContainerLoadedMetadata_v1 extends BaseMetaData implements MetaData
         this.containerType = containerType;
     }
 
-    @Override
-    public Integer getMetaDataVersion() {
-        return 1;
-    }
 
+    /**
+     * First data version, so nothing need to be executed
+     * @param baseMetaData
+     */
     @Override
     public void upgrade(BaseMetaData baseMetaData) {
 
     }
+
 }
