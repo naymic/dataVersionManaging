@@ -1,5 +1,5 @@
 # Data Version Managing
-Implementation of events with various meta data versions and possibility to upgrade meta data to the last version.
+Implementation of events with various meta data versions and possibility to upgrade data to the last version.
 
 ## Features
 ### Example implementation and tests 
