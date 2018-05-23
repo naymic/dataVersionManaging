@@ -9,4 +9,9 @@ public class TestEvent extends BaseEvent {
         super(data);
     }
 
+    /**
+     * Link between a event and its MetaData is defined by first MetaData Class of a certain event
+     * Method -> getEventClass()
+     */
+
 }
