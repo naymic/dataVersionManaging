@@ -36,9 +36,9 @@ public abstract class BaseEvent {
      */
     private void  checkVersion(BaseMetaData data){
         if(!getLastMetaDataVersion().equals(data.getDataVersion())){
-            metaDataVersions.subList(data.getDataVersion()-1, this.getLastMetaDataVersion()).forEach(metaData -> {
-                metaData.upgrade(data);
-                data.setVersion(metaData.getMetaDataVersion());
+            metaDataVersions.subList(data.getDataVersion()-1, this.getLastMetaDataVersion()).forEach(dataVersion -> {
+                dataVersion.upgrade(data);
+                data.setVersion(dataVersion.getMetaDataVersion());
             });
         }
     }
